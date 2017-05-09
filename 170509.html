@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>17-05-09</title>
+	<meta name="generator" content="BBEdit 11.6" />
+	<style type="text/css">
+		#stars {
+			width: 720px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="stars">...</div>
+	<script>
+		var str = "*"
+		var space = '&nbsp;'
+		var xWidth = str.repeat(88) + "<br/>"
+		var yWidth = space.repeat(40) + str.repeat(35) + "<br/>"
+		var x = xWidth.repeat(4);
+		var y = yWidth.repeat(4);
+		
+		document.getElementById("stars").innerHTML = x.repeat(2) + y.repeat(10) + x.repeat(2);
+	</script>
+</body>
+</html>
