@@ -14,14 +14,20 @@
 <body>
 	<div id="stars">...</div>
 	<script>
-		var str = "*"
-		var space = '&nbsp;'
-		var xWidth = str.repeat(88) + "<br/>"
-		var yWidth = space.repeat(40) + str.repeat(35) + "<br/>"
-		var x = xWidth.repeat(4);
-		var y = yWidth.repeat(4);
+// 		var str = "*"
+// 		var space = '&nbsp;'
+// 		var xWidth = str.repeat(88) + "<br/>"
+// 		var yWidth = space.repeat(40) + str.repeat(35) + "<br/>"
+// 		var x = xWidth.repeat(4);
+// 		var y = yWidth.repeat(4);
 		
-		document.getElementById("stars").innerHTML = x.repeat(2) + y.repeat(10) + x.repeat(2);
+// 		document.getElementById("stars").innerHTML = x.repeat(2) + y.repeat(10) + x.repeat(2);
+		var line = "";
+		var i ;
+		for (i = 1; i < 6; i++) {
+		    line = line + "*".repeat(i) + "<br>";
+		}
+		stars.innerHTML = line;
 	</script>
 </body>
 </html>
