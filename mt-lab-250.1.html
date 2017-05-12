@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+		次數:
+		<input type="text" id="txt1" name="txt1" value="5" PlaceHolder="Keyin something" size="40">
+		<br><br>
+		<input type="button" id="Button1" name="Button1"   
+			value="1. 點我一下，執行 JavaScript" onclick="Button1_onclick()">
+		<br><br>
+		符號:
+    <INPUT type="text" id="txt2"  name="txt2" value="@" size="40">
+    <br><br>
+    <div id="debug"></div>
+    <script>
+    	
+    	function Button1_onclick(){
+    	// Step 03 設定txt.value
+    		var x = txt1.value;
+    		var y = txt2.value;
+    	// Step 02 製作多行
+    		var result = "";
+				for ( var i = 1; i <=x; i++){
+					result = result + getLine (i,y) + "<br>";
+				}
+				debug.innerHTML = result;
+    	}
+    	
+			// Step 01 製作第一行	
+			function getLine (count, symbol){
+				var line = "";
+				for (var i = 1; i<= count; i ++){
+					line = line + symbol;
+				}
+				return line;
+			}
+			
+			//step 的計算
+		// 		 ""	= 	    "" + getLine(0,"*") + "<br>";
+		// 		"*" =      "*" + getLine(1,"*") + "<br>";
+		// 	 "**" =     "**" + getLine(2,"*") + "<br>";
+		// 	"***" =    "***" + getLine(3,"*") + "<br>";
+		// "****" =   "****" + getLine(4,"*") + "<br>";
+		// "*****" =  "*****" + getLine(5,"*") + "<br>";
+		</script>
+			
+</body>
+</html>
